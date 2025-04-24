@@ -2,6 +2,7 @@ body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    transition: .3s;
 
 }
 header{
@@ -127,7 +128,7 @@ align-items: center;
   }
 
 .bt-cv {
-    display: inline-block;
+    display: flex;
     padding: 10px 20px;
     text-decoration: none;
     background-color: white;
@@ -182,3 +183,150 @@ align-items: center;
 .imgprojetos:hover .infoprojetos{
     transform: translateY(0%);
 }
+
+.trilho{
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    background-color:#c3c3c3;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador{
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .3s;
+
+}
+
+.trilho.dark{
+    background-color: #4d4d4d;
+
+}
+
+.trilho.dark .indicador{
+    left: 32px;
+    background-color: black;
+
+}
+
+body.dark, body.dark .head{
+    background-color: black;
+}
+
+body.dark, body.dark .head, body.dark a {
+    color:white;
+    border-color: white;
+}
+
+body.dark .bt-cv{
+    border-color: white;
+    background-color: black;
+}
+
+body.dark .bt-cv:hover {
+    background-color: #484848;
+    color: white;
+}
+
+@media screen and (max-width: 1116px) {
+
+  
+    .head {
+      position: relative;
+      transform: none !important;
+    }
+
+.welcome, .link li a  {
+    display: none;
+}
+    /* Seção geral */
+    section {
+      flex-direction: column;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+  
+    .perfil, .projeto {
+      width: 100%;
+      padding: 0;
+    }
+  
+    /* Card do projeto */
+    .imgprojetos {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      background-color: white;
+      margin-bottom: 20px;
+    }
+  
+    .imgprojetos img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px 12px 0 0;
+    }
+  
+    .infoprojetos {
+      padding: 15px;
+      background-color: white;
+      color: black;
+      text-align: left;
+    }
+  
+    .infoprojetos h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  
+    .infoprojetos p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #444;
+    }
+  
+    /* Remove efeitos desktop */
+    .imgprojetos:hover img,
+    .imgprojetos:hover .infoprojetos {
+      filter: none;
+      transform: none;
+    }
+  
+    .infoprojetos {
+      position: relative;
+      transform: none !important;
+    }
+  
+    /* Links sociais e layout */
+    .linksobre, .link {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-start;
+      padding-top: 20px;
+    }
+  
+    .link ul {
+      flex-direction: row;
+      gap: 10px;
+    }
+  
+    .bt-cv {
+      text-align: center;
+    }
+  }
+  
