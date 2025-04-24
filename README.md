@@ -14,7 +14,7 @@
 
 
 <p align="center">
-    <img src="/github/print1.png" alt="Imagem Website" width="400px">
+    <img src="/github/print1.png" alt="Imagem Website" width="700px">
 </p>
 
 <h2 id="started">📌 Sobre</h2>
